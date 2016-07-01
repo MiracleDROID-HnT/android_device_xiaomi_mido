@@ -624,7 +624,7 @@ service gx_fpd /system/vendor/bin/gx_fpd
     writepid /dev/cpuset/system-background/tasks
 
 on property:dev.bootcomplete=1
-    setprop sys.io.scheduler "bfq"
+    setprop sys.io.scheduler "sio"
 
 on property:sys.fp.vendor=switchf
     stop gx_fpd
