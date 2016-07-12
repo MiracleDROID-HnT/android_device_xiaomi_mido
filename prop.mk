@@ -132,7 +132,8 @@ vendor.vidc.enc.disable_bframes=1
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.sys.fw.dex2oat_thread_count=8 \
 ro.vendor.extension_library=libqti-perfd-client.so \
-ro.vendor.qti.sys.fw.bg_apps_limit=60
+ro.vendor.qti.sys.fw.bg_apps_limit=60 \
+sys.use_fifo_ui=1
 
 # Netmgrd
 PRODUCT_PROPERTY_OVERRIDES += \
