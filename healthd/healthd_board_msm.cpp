@@ -65,6 +65,8 @@
 #define LOGW(tag, x...) do { KLOG_WARNING(tag, x); } while (0)
 #define LOGV(tag, x...) do { KLOG_DEBUG(tag, x); } while (0)
 
+static const GRFont* gr_font = NULL;
+
 enum {
     RED_LED = 0x01 << 0,
     GREEN_LED = 0x01 << 1,
@@ -108,6 +110,11 @@ static int batt_info_cached[BATT_INFO_MAX];
 static bool healthd_msm_err_log_once;
 static int8_t healthd_msm_log_en;
 static int8_t healthd_msm_store_params;
+
+static const GRFont* get_font()
+{
+    return gr_font;
+}
 
 static int write_file_int(char const* path, int value)
 {
@@ -199,13 +206,13 @@ void healthd_board_mode_charger_draw_battery(
     static int char_height = -1, char_width = -1;
 
     if (char_height == -1 && char_width == -1)
-        gr_font_size(gr_sys_font(), &char_width, &char_height);
+        gr_font_size(get_font(), &char_width, &char_height);
     snprintf(cap_str, (STR_LEN - 1), "%d%%", batt_prop->batteryLevel);
-    str_len_px = gr_measure(gr_sys_font(), cap_str);
+    str_len_px = gr_measure(get_font(), cap_str);
     x = (gr_fb_width() - str_len_px) / 2;
     y = (gr_fb_height() + char_height) / 2;
     gr_color(0xa4, 0xc6, 0x39, 255);
-    gr_text(gr_sys_font(), x, y, cap_str, 0);
+    gr_text(get_font(), x, y, cap_str, 0);
 }
 
 void healthd_board_mode_charger_battery_update(
@@ -302,6 +309,15 @@ void healthd_board_mode_charger_init()
     int bms_ready = 0;
     int wait_count = 0;
     int fd;
+
+    GRFont* tmp_font;
+    int res = gr_init_font("font_log", &tmp_font);
+    if (res == 0) {
+        gr_font = tmp_font;
+    } else {
+        LOGW("Couldn't open font, falling back to default!\n");
+        gr_font = gr_sys_font();
+    }
 
     /* check the charging is enabled or not */
     fd = open(CHARGING_ENABLED_PATH, O_RDONLY);
