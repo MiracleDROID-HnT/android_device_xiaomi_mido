@@ -51,5 +51,6 @@ public class Startup extends BroadcastReceiver {
         YellowTorchBrightnessPreference.restore(context);
         WhiteTorchBrightnessPreference.restore(context);
         DeviceSettings.restore(context);
+        DisplayCalibration.restore(context);
     }
 }
