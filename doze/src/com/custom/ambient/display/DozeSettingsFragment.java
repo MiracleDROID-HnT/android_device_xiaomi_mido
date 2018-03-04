@@ -19,12 +19,7 @@ package com.custom.ambient.display;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v14.preference.PreferenceFragment;
 import android.support.v14.preference.SwitchPreference;
@@ -53,12 +48,6 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
         addPreferencesFromResource(R.xml.doze_settings);
         final ActionBar actionBar = getActivity().getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-
-        SharedPreferences prefs = getActivity().getSharedPreferences("doze_settings",
-                Activity.MODE_PRIVATE);
-        if (savedInstanceState == null && !prefs.getBoolean("first_help_shown", false)) {
-            showHelp();
-        }
 
         boolean dozeEnabled = Utils.isDozeEnabled(getActivity());
 
@@ -130,29 +119,5 @@ public class DozeSettingsFragment extends PreferenceFragment implements OnPrefer
             return true;
         }
         return false;
-    }
-
-    private static class HelpDialogFragment extends DialogFragment {
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-            return new AlertDialog.Builder(getActivity())
-                    .setTitle(R.string.doze_settings_help_title)
-                    .setMessage(R.string.doze_settings_help_text)
-                    .setNegativeButton(R.string.dialog_ok, (dialog, which) -> dialog.cancel())
-                    .create();
-        }
-
-        @Override
-        public void onCancel(DialogInterface dialog) {
-            getActivity().getSharedPreferences("doze_settings", Activity.MODE_PRIVATE)
-                    .edit()
-                    .putBoolean("first_help_shown", true)
-                    .commit();
-        }
-    }
-
-    private void showHelp() {
-        HelpDialogFragment fragment = new HelpDialogFragment();
-        fragment.show(getFragmentManager(), "help_dialog");
     }
 }
