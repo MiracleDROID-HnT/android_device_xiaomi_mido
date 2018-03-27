@@ -87,7 +87,8 @@ persist.hwc.mdpcomp.enable=true \
 ro.opengles.version=196610 \
 ro.qualcomm.cabl=0 \
 ro.sf.lcd_density=480 \
-debug.sdm.support_writeback=0
+debug.sdm.support_writeback=0 \
+sdm.debug.rotator_downscale=1
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
