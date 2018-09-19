@@ -150,7 +150,7 @@ USE_DEVICE_SPECIFIC_GPS := true
 TARGET_NO_RPC := true
 
 # Extended Filesystem Support
-TARGET_EXFAT_DRIVER := sdfat
+TARGET_EXFAT_DRIVER := exfat
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
