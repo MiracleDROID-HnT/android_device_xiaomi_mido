@@ -1,3 +1,4 @@
 allow vold proc_touchpanel:dir r_dir_perms;
+allow vold system_data_file:file { ioctl open };
 dontaudit vold gx_fpd_exec:file getattr;
 dontaudit vold vendor_file:file getattr;
