@@ -1,3 +1,4 @@
+allow untrusted_app rootfs:dir { open read };
 dontaudit untrusted_app hal_memtrack_hwservice:hwservice_manager find;
 dontaudit untrusted_app proc_zoneinfo:file read;
 dontaudit untrusted_app proc:file read;
