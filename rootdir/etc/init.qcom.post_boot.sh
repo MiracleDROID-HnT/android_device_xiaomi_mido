@@ -3168,6 +3168,25 @@ case "$target" in
         echo 512 > /sys/block/dm-1/queue/read_ahead_kb
         echo 512 > /sys/block/mmcblk0rpmb/bdi/read_ahead_kb
         echo 512 > /sys/block/mmcblk0rpmb/queue/read_ahead_kb
+
+        # Configure Maple I/O Scheduler
+        scheduler=/sys/block/mmcblk0/queue/scheduler;
+        maple=false;
+        if grep 'maple' $scheduler; then
+            maple=true;
+        fi
+        if [ "$maple" == "true" ]; then
+            if [ -e $scheduler ]; then
+                echo 4 > /sys/block/mmcblk0/queue/iosched/writes_starved
+                echo 16 > /sys/block/mmcblk0/queue/iosched/fifo_batch
+                echo 350 > /sys/block/mmcblk0/queue/iosched/sync_read_expire
+                echo 550 > /sys/block/mmcblk0/queue/iosched/sync_write_expire
+                echo 250 > /sys/block/mmcblk0/queue/iosched/async_read_expire
+                echo 450 > /sys/block/mmcblk0/queue/iosched/async_write_expire
+                echo 10 > /sys/block/mmcblk0/queue/iosched/sleep_latency_multiple
+            fi
+        fi
+
         setprop sys.post_boot.parsed 1
 
         low_ram_enable=`getprop ro.config.low_ram`
