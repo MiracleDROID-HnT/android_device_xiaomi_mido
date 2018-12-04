@@ -1734,8 +1734,8 @@ case "$target" in
                 echo 1 > /sys/devices/system/cpu/cpu7/online
 
                 # Input boost configuration
-                echo "0:1036800" > /sys/module/cpu_boost/parameters/input_boost_freq
-                echo 500 > /sys/module/cpu_boost/parameters/input_boost_ms
+                echo "1689600" > /sys/module/cpu_boost/parameters/input_boost_freq
+                echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 
                 # Enable low power modes
                 echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
