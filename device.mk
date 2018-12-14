@@ -171,13 +171,8 @@ PRODUCT_PACKAGES += \
 
 # FM
 PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    init.qti.fm.sh \
-    qcom.fmradio
-
-PRODUCT_BOOT_JARS += \
-    qcom.fmradio
+    FMRadio \
+    libfmjni
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
