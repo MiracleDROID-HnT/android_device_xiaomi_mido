@@ -25,25 +25,25 @@ INITIAL_COPYRIGHT_YEAR=2017
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
+if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-MDROID_ROOT="$MY_DIR"/../../..
+MDROID_ROOT="${MY_DIR}/../../.."
 
-HELPER="$MDROID_ROOT"/vendor/mdroid/build/tools/extract_utils.sh
-if [ ! -f "$HELPER" ]; then
-    echo "Unable to find helper script at $HELPER"
+HELPER="${MDROID_ROOT}/vendor/mdroid/build/tools/extract_utils.sh"
+if [ ! -f "${HELPER}" ]; then
+    echo "Unable to find helper script at ${HELPER}"
     exit 1
 fi
-. "$HELPER"
+source "${HELPER}"
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$MDROID_ROOT"
+setup_vendor "${DEVICE}" "${VENDOR}" "${MDROID_ROOT}"
 
 # Copyright headers and guards
 write_headers "mido"
 
 # The standard device blobs
-write_makefiles "$MY_DIR"/proprietary-files.txt true
+write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
-# We are done!
+# Finish
 write_footers
