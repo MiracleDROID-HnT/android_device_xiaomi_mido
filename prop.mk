@@ -2,6 +2,17 @@
 # system.prop for mido
 #
 
+ifeq ($(WITH_ADB),true)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+ro.adb.secure=0 \
+ro.secure=0 \
+ro.debuggable=1 \
+persist.logd.logpersistd=logcatd \
+persist.service.adb.enable=1 \
+persist.sys.usb.config=mtp,adb \
+ro.logd.size.stats=16M
+endif
+
 # ART
 PRODUCT_PROPERTY_OVERRIDES += \
 dalvik.vm.dex2oat-filter=speed \
