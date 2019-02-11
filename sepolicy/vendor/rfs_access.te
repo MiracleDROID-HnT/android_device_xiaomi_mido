@@ -1,0 +1,1 @@
+dontaudit rfs_access self:capability sys_admin;

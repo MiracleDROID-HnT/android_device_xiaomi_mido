@@ -1,0 +1,1 @@
+dontaudit thermal-engine self:capability sys_admin;

@@ -1,0 +1,1 @@
+dontaudit thermalserviced self:capability sys_admin;

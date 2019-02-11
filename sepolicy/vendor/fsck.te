@@ -1,0 +1,1 @@
+dontaudit fsck self:capability sys_admin;

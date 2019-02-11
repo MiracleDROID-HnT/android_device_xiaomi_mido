@@ -1,0 +1,1 @@
+dontaudit lmkd self:capability sys_admin;

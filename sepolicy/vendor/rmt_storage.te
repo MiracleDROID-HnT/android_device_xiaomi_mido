@@ -1,0 +1,1 @@
+dontaudit rmt_storage self:capability sys_admin;

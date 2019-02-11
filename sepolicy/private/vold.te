@@ -1,0 +1,2 @@
+allow vold sdcardd:process noatsecure;
+allow vold sgdisk:process noatsecure;

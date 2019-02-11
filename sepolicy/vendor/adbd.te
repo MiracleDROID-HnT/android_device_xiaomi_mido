@@ -1,0 +1,1 @@
+dontaudit adbd self:capability sys_admin;
