@@ -602,6 +602,9 @@ service gx_fpd /vendor/bin/gx_fpd
     group system drmrpc
     writepid /dev/cpuset/system-background/tasks
 
+on property:dev.bootcomplete=1
+    setprop sys.io.scheduler "sio"
+
 on property:sys.fp.vendor=switchf
     stop gx_fpd
     setprop sys.fp.vendor searchf
@@ -616,6 +619,3 @@ on property:sys.fp.onstart=1
     setprop ro.boot.fpsensor gdx
     setprop ro.hardware.fingerprint goodix
     start fps_hal
-
-on property:dev.bootcomplete=1
-    setprop sys.io.scheduler "maple"
