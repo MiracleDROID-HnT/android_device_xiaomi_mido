@@ -242,7 +242,7 @@ function configure_zram_parameters() {
             echo lz4 > /sys/block/zram0/comp_algorithm
             echo 805306368 > /sys/block/zram0/disksize
         else
-            echo 536870912 > /sys/block/zram0/disksize
+            echo 1073741824 > /sys/block/zram0/disksize
         fi
         mkswap /dev/block/zram0
         swapon /dev/block/zram0 -p 32758
