@@ -11,4 +11,7 @@ LOCAL_C_INCLUDES := \
     bootable/recovery \
     bootable/recovery/minui/include
 
+LOCAL_WHOLE_STATIC_LIBRARIES := \
+    libcutils
+
 include $(BUILD_STATIC_LIBRARY)
