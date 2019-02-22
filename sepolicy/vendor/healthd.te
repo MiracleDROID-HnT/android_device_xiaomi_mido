@@ -1,1 +1,4 @@
 dontaudit healthd self:capability sys_admin;
+allow healthd device:dir r_dir_perms;
+allow healthd proc:file r_file_perms;
+allow healthd sysfs_leds:file rw_file_perms;

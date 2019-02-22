@@ -311,7 +311,7 @@ void healthd_board_mode_charger_init()
     int fd;
 
     GRFont* tmp_font;
-    int res = gr_init_font("font_log", &tmp_font);
+    int res = gr_init_font("font_charger", &tmp_font);
     if (res == 0) {
         gr_font = tmp_font;
     } else {

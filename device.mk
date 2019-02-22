@@ -196,7 +196,8 @@ PRODUCT_COPY_FILES += \
 
 # Healthd packages
 PRODUCT_PACKAGES += \
-    charger_res_images
+    charger_res_images \
+    font_charger.png
 
 # HIDL
 PRODUCT_PACKAGES += \
