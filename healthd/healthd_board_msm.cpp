@@ -211,7 +211,7 @@ void healthd_board_mode_charger_draw_battery(
     str_len_px = gr_measure(get_font(), cap_str);
     x = (gr_fb_width() - str_len_px) / 2;
     y = (gr_fb_height() + char_height) / 2;
-    gr_color(0xa4, 0xc6, 0x39, 255);
+    gr_color(0xff, 0xff, 0xff, 255);
     gr_text(get_font(), x, y - char_height, cap_str, 0);
 }
 
