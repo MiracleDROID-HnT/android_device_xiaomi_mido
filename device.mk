@@ -194,11 +194,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
 
-# Healthd packages
-PRODUCT_PACKAGES += \
-    charger_res_images \
-    font_charger.png
-
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
