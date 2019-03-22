@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <string name="app_name">Xiaomi</string>
+    <string name="advanced_settings">Funkcje urządzenia</string>
+    <string name="category_vibrator">Wibracja</string>
+    <string name="vib_strength_title_head">Siła wibracji</string>
+    <string name="category_torch">Latarka</string>
+    <string name="yellow_torch_brightness_title_head">Maksymalna jasność żółtej diody LED</string>
+    <string name="white_torch_brightness_title_head">Maksymalna jasność białej diody LED</string>
+    <string name="touchscreen_title">Ekran dotykowy</string>
+    <string name="glove_mode_title">Tryb rękawiczek</string>
+    <string name="glove_mode_summary">Zwiększ czułość ekranu na dotyk (może powodować zmiejszenie żywotność baterii)</string>
+    <string name="graphics_title">Wyświetlacz</string>
+    <string name="kcal_title">Kolory ekanu</string>
+    <string name="kcal_summary">Kalibruj kolory ekranu za pomocą KCAL</string>
+    <string name="kcal_enabled_title">Włącz KCAL</string>
+    <string name="kcal_enabled_summary">Włącz kalibrację wyświetlacza za pomocą KCAL</string>
+    <string name="kcal_red">Odcień: Czerwony</string>
+    <string name="kcal_green">Odcień: Zielony</string>
+    <string name="kcal_blue">Odcień: Niebieski</string>
+    <string name="kcal_saturation">Nasycenie kolorów</string>
+    <string name="kcal_contrast">Kontrast ekranu</string>
+    <string name="kcal_value">Wartość</string>
+    <string name="kcal_hue">Odcień ekranu</string>
+    <string name="kcal_invert_title">Odwróć kolory</string>
+    <string name="kcal_invert_summary">Odwraca wszystkie kolory wyświetlane na ekranie urządzenia</string>
+    <string name="kcal_greyscale_title">Skala szarości</string>
+    <string name="kcal_greyscale_summary">Całkowicie wyłącz nasycenie kolorów</string>
+    <string name="menu_reset">Reset</string>
+    <string name="presets_list_title">Zdefiniowane profile KCAL</string>
+    <string name="default_values">Domyślny</string>
+    <string name="version_1">Wersja 1</string>
+    <string name="version_2">Wersja 2</string>
+    <string name="version_3">Wersja 3</string>
+    <string name="triluminous">Świetlisty</string>
+    <string name="deep_black_and_white">Głęboki czarny i biały</string>
+    <string name="deep_natural">Naturalna głębia</string>
+    <string name="cool_amoled">Bombowy amoledowy!</string>
+    <string name="extreme_amoled">Super Amoled</string>
+    <string name="warm_amoled">Ciepły Amoled</string>
+    <string name="hybrid_mamba">Hybrydowa Mamba</string>
+</resources>
