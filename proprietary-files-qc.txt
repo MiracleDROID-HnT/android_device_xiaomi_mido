@@ -22,15 +22,15 @@ vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so
 vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 
-# ANT
-lib/com.qualcomm.qti.ant@1.0.so
--lib/libantradio.so
-lib64/com.qualcomm.qti.ant@1.0.so
--lib64/libantradio.so
-vendor/lib/com.qualcomm.qti.ant@1.0_vendor.so
-vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
-vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
+# ANT - from bardock-pro - OPM1.171019.026 1749
+lib/com.qualcomm.qti.ant@1.0.so|9f1f193a344710f378cc0c8d4232e3271f31da0f
+-lib/libantradio.so|a52b41ab9094934a157d2ab2540489dbc4679036
+lib64/com.qualcomm.qti.ant@1.0.so|b768654ae3de87d1f85f3052c3fa0abb92bf4a39
+-lib64/libantradio.so|475b1c9a21d0e00c0bbbb74a77df600e8bc1479f
+vendor/lib/com.qualcomm.qti.ant@1.0_vendor.so|35174fa46d70e9fe0bd4ad83bd8981092334c539
+vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so|f715c3fd77a7bc370bbb4d62af814d5b6cc57d20
+vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so|6775046293f13a8fd0924814e0cdbed3993df4ec
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|dbe449443a23b3424031caf13d7064ee93e14a51
 
 # AptX
 vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
