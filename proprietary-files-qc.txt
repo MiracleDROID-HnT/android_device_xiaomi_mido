@@ -282,13 +282,13 @@ vendor/firmware/a530_pm4.fw
 vendor/lib/hw/keystore.msm8953.so
 vendor/lib64/hw/keystore.msm8953.so
 
-# Listen
-vendor/lib64/hw/sound_trigger.primary.msm8953.so
-vendor/lib64/vendor.qti.voiceprint@1.0.so
-vendor/lib/hw/sound_trigger.primary.msm8953.so
-vendor/lib/libadpcmdec.so
-vendor/lib/libsmwrapper.so
-vendor/lib/vendor.qti.voiceprint@1.0.so
+# Listen - from bardock-pro - OPM1.171019.026 1749
+vendor/lib64/hw/sound_trigger.primary.msm8953.so|424b9447ab9af83a989c13a4d078afef44c0eb0b
+vendor/lib64/vendor.qti.voiceprint@1.0.so|9f45b4ffc8aa46b262a9903da4e0d7bc05e551cb
+vendor/lib/hw/sound_trigger.primary.msm8953.so|82abacd768a76b6a7ba23756bc5e7ff59d3995a6
+vendor/lib/libadpcmdec.so|f535598d22b385456be46db80059755c19db5b7c
+vendor/lib/libsmwrapper.so|67b3ac79dbe324f1a6525da01a9b34ccd03a0665
+vendor/lib/vendor.qti.voiceprint@1.0.so|80c202b8fdd9a019660310add85150f737e433bb
 
 # Media - from bardock-pro - OPM1.171019.026 1749
 vendor/lib/libI420colorconvert.so|7dca5526b37c9bcad9c13130bc22ade0288b8fa3
