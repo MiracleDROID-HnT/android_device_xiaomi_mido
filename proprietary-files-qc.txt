@@ -587,13 +587,13 @@ vendor/lib64/libthermalioctl.so
 vendor/bin/time_daemon|8ea7d65a65c1d50afc6553ad52848b454c62563d
 vendor/lib64/libtime_genoff.so|7683a85cae9f17cd535e8960fceda1d6831074a0
 
-# TUI
-lib/vendor.qti.hardware.tui_comm@1.0.so
-lib64/vendor.qti.hardware.tui_comm@1.0.so
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so
+# TUI - from bardock-pro - OPM1.171019.026 1749
+lib/vendor.qti.hardware.tui_comm@1.0.so|f9eda0a4434f1fa3c12e5c72412251c9d4b3658c
+lib64/vendor.qti.hardware.tui_comm@1.0.so|ba383e4d955c4cd5e372886ab05695731f54a763
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|99381a71c484c7be24f3817619027a234c6b92f1
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so|10577fe6c0d34e01510f6b0755ff44cb69e91fdf
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so|89995cfa49b8fec00f223727ee1b98246d4f8e60
 
 # Widevine
 vendor/bin/hw/android.hardware.drm@1.0-service.widevine
