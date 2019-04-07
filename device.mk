@@ -178,6 +178,10 @@ PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
 
+# Use daemon to detect folio open/close
+PRODUCT_PACKAGES += \
+    folio_daemon
+
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
