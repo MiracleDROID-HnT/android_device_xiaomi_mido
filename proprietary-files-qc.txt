@@ -77,12 +77,8 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|13546d4fa9bde98bb7ad2
 vendor/lib64/libbtnv.so|ca89528a860f4fd913b26571f649253a7800cae5
 vendor/lib64/libbt-hidlclient.so|c2358e54949c8b6cd267d34c6b8f3df92a90a490
 
-# Bluetooth (shared dependencies)
-vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so|bb544ecdebf669d71ce2b18a1fa8aaff78040f2a
-
 # Camera firmware
 vendor/firmware/cpp_firmware_v1_5_0.fw
-
 
 # CNE
 etc/cne/andsfCne.xml
@@ -165,6 +161,20 @@ vendor/lib64/librpmb.so
 vendor/lib64/libsecureui.so
 vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libssd.so
+
+# FM - from bardock-pro - OPM1.171019.026 1749
+bin/fmconfig:vendor/bin/fmconfig|0ce03121240eacb315ed732c5b13c8d032ae0f60
+lib/fm_helium.so:vendor/lib/fm_helium.so|50b500d7c7e6792144048ff4e11bef1ae01a97e6
+lib/libfm-hci.so:vendor/lib/libfm-hci.so|4cf8be3458080f7e6d3f225f2081d9eb343f2981
+lib/vendor.qti.hardware.fm@1.0.so|26c153c4132e9dc874338240ac89769133760994
+lib64/fm_helium.so:vendor/lib64/fm_helium.so|38d8a9af45a24eef5d105d90543fa91673d66b24
+lib64/libfm-hci.so:vendor/lib64/libfm-hci.so|a6f092fc6cba1d421b6c631aedbcbdb6ae2802f5
+lib64/vendor.qti.hardware.fm@1.0.so|0ec270058fd4f93b1c1406c25eef06c80127697a
+vendor/bin/fm_qsoc_patches|c1693a34a7d10eda9fd0e05e83fa874cb696efd0
+vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|bc42a3c9920e1a5330458480079d870fddf94fb6
+vendor/lib/vendor.qti.hardware.fm@1.0_vendor.so|14d2b50603d64cb50cd305d82378004735ad7bbf
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|9d8bc8250ae38ae98954b7ccf8e36b0f41d84e8f
+vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so|bb544ecdebf669d71ce2b18a1fa8aaff78040f2a
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8953.so
