@@ -175,13 +175,8 @@ PRODUCT_PACKAGES += \
 
 # FM
 PRODUCT_PACKAGES += \
-    FM2 \
-    init.qti.fm.sh \
-    libqcomfm_jni \
-    qcom.fmradio
-
-PRODUCT_BOOT_JARS += \
-    qcom.fmradio
+    FMRadio \
+    libfmjni
 
 # Use daemon to detect folio open/close
 PRODUCT_PACKAGES += \
