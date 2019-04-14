@@ -180,6 +180,9 @@ PRODUCT_PACKAGES += \
     libqcomfm_jni \
     qcom.fmradio
 
+PRODUCT_BOOT_JARS += \
+    qcom.fmradio
+
 # Use daemon to detect folio open/close
 PRODUCT_PACKAGES += \
     folio_daemon
