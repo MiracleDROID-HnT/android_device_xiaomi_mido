@@ -21,5 +21,8 @@
 # Kcal
 /sys/devices/platform/kcal_ctrl.0(/.*)?              u:object_r:sysfs_kcal:s0
 
+# Sound Control
+/sys/kernel/sound_control(/.*)?              u:object_r:sysfs_sound_control:s0
+
 # Light HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.xiaomi_mido u:object_r:hal_light_default_exec:s0

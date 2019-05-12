@@ -53,4 +53,9 @@
     <string name="extreme_amoled">Екстримальний Amoled</string>
     <string name="warm_amoled">Теплий Amoled</string>
     <string name="hybrid_mamba">Гібридний Мамба</string>
+
+    <string name="sound_title">Звук</string>
+    <string name="headphone_gain">Підсилення навушників</string>
+    <string name="speaker_gain">Підсилення динаміка</string>
+    <string name="mic_gain">Підсилення мікрофону</string>
 </resources>

@@ -48,11 +48,17 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String KEY_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
     public static final String KEY_WHITE_TORCH_BRIGHTNESS = "white_torch_brightness";
     public static final String KEY_GLOVE_MODE = "glove_mode";
+    public static final String KEY_HEADPHONE_GAIN = "headphone_gain";
+    public static final String KEY_SPEAKER_GAIN = "speaker_gain";
+    public static final String KEY_MICROPHONE_GAIN = "mic_gain";
 
     private VibratorStrengthPreference mVibratorStrength;
     private YellowTorchBrightnessPreference mYellowTorchBrightness;
     private WhiteTorchBrightnessPreference mWhiteTorchBrightness;
     private TwoStatePreference mGloveMode;
+    private HeadphoneGainPreference mHeadphoneGain;
+    private SpeakerGainPreference mSpeakerGain;
+    private MicGainPreference mMicGain;
 
     private static final String GLOVE_MODE_FILE = "/sys/devices/virtual/tp_glove/device/glove_enable";
 
@@ -88,6 +94,21 @@ public class DeviceSettings extends PreferenceFragment implements
         mGloveMode = (TwoStatePreference) findPreference(KEY_GLOVE_MODE);
         mGloveMode.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(DeviceSettings.KEY_GLOVE_MODE, false));
         mGloveMode.setOnPreferenceChangeListener(this);
+
+        mHeadphoneGain = (HeadphoneGainPreference) findPreference(KEY_HEADPHONE_GAIN);
+        if (mHeadphoneGain != null) {
+            mHeadphoneGain.setEnabled(HeadphoneGainPreference.isSupported());
+        }
+
+        mSpeakerGain = (SpeakerGainPreference) findPreference(KEY_SPEAKER_GAIN);
+        if (mSpeakerGain != null) {
+            mSpeakerGain.setEnabled(SpeakerGainPreference.isSupported());
+        }
+
+        mMicGain = (MicGainPreference) findPreference(KEY_MICROPHONE_GAIN);
+        if (mMicGain != null) {
+            mMicGain.setEnabled(MicGainPreference.isSupported());
+        }
     }
 
     public static void restore(Context context) {

@@ -16,3 +16,4 @@ type proc_touchpanel, fs_type, sysfs_type;
 # Torch
 type sysfs_torch, fs_type, sysfs_type;
 type sysfs_kcal, fs_type, sysfs_type;
+type sysfs_sound_control, fs_type, sysfs_type;
