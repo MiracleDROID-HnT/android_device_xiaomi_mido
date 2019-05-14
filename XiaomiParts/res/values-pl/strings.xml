@@ -53,4 +53,12 @@
     <string name="extreme_amoled">Super Amoled</string>
     <string name="warm_amoled">Ciepły Amoled</string>
     <string name="hybrid_mamba">Hybrydowa Mamba</string>
+
+    <string name="sound_title">Dzwięk</string>
+    <string name="sound_control_title">Konfigurator dzwięku</string>
+    <string name="sound_control_summary">Ustaw wzmocnienie słuchawek, głośnika lub mikrofonu </string>
+    <string name="headphone_gain">Wzmocnienie słuchawek</string>
+    <string name="speaker_gain">Wzmocnienie głośnika</string>
+    <string name="mic_gain">Wzmocnienie mikrofonu</string>
+
 </resources>
