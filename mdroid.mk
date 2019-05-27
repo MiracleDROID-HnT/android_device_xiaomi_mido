@@ -19,6 +19,9 @@ $(call inherit-product, device/xiaomi/mido/full_mido.mk)
 # Inherit some common MDroid stuff.
 $(call inherit-product, vendor/mdroid/config/common_full_phone.mk)
 
+# Release keys
+$(call inherit-product-if-exists, vendor/certs/config.mk)
+
 PRODUCT_NAME := mdroid_mido
 BOARD_VENDOR := Xiaomi
 
