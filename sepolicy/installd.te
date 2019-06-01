@@ -1,0 +1,2 @@
+dontaudit installd gx_fpd_exec:file getattr;
+dontaudit installd vendor_file:file getattr;

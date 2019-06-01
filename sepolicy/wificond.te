@@ -1,0 +1,2 @@
+dontaudit wificond gx_fpd_exec:file getattr;
+dontaudit wificond vendor_file:file getattr;

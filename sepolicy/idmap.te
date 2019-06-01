@@ -1,0 +1,2 @@
+dontaudit idmap gx_fpd_exec:file getattr;
+dontaudit idmap vendor_file:file getattr;

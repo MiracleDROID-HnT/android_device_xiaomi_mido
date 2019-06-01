@@ -1,0 +1,2 @@
+dontaudit fsck gx_fpd_exec:file getattr;
+dontaudit fsck vendor_file:file getattr;

@@ -1,0 +1,2 @@
+dontaudit blkid_untrusted gx_fpd_exec:file getattr;
+dontaudit blkid_untrusted vendor_file:file getattr;

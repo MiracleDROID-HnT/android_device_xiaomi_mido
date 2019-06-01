@@ -1,0 +1,2 @@
+dontaudit servicemanager gx_fpd_exec:file getattr;
+dontaudit servicemanager vendor_file:file getattr;

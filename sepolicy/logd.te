@@ -1,0 +1,2 @@
+dontaudit logd gx_fpd_exec:file getattr;
+dontaudit logd vendor_file:file getattr;

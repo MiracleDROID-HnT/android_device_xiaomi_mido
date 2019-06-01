@@ -1,0 +1,2 @@
+dontaudit netd gx_fpd_exec:file getattr;
+dontaudit netd vendor_file:file getattr;

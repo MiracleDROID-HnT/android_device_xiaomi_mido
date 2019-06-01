@@ -1,0 +1,2 @@
+dontaudit mediametrics gx_fpd_exec:file getattr;
+dontaudit mediametrics vendor_file:file getattr;

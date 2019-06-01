@@ -1,0 +1,2 @@
+dontaudit perfprofd gx_fpd_exec:file getattr;
+dontaudit perfprofd vendor_file:file getattr;

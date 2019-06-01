@@ -1,1 +1,3 @@
+#dontaudit storaged gx_fpd_exec:file getattr;
 dontaudit storaged self:capability sys_admin;
+dontaudit storaged vendor_file:file getattr;

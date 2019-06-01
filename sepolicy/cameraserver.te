@@ -1,0 +1,2 @@
+dontaudit cameraserver gx_fpd_exec:file getattr;
+dontaudit cameraserver vendor_file:file getattr;

@@ -8,5 +8,7 @@ allow untrusted_app_25 untrusted_app_25:udp_socket ioctl;
 allow untrusted_app_25 vold_exec:file { open read };
 dontaudit untrusted_app_25 apk_data_file:file setattr;
 dontaudit untrusted_app_25 debugfs:file read;
+dontaudit untrusted_app_25 gx_fpd_exec:file getattr;
 dontaudit untrusted_app_25 proc:file read;
 dontaudit untrusted_app_25 serialno_prop:file read;
+dontaudit untrusted_app_25 vendor_file:file getattr;

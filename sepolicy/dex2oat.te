@@ -1,0 +1,2 @@
+dontaudit dex2oat gx_fpd_exec:file getattr;
+dontaudit dex2oat vendor_file:file getattr;

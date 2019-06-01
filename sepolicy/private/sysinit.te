@@ -1,1 +1,3 @@
 allow sysinit self:capability sys_admin;
+#dontaudit sysinit gx_fpd_exec:file getattr;
+dontaudit sysinit vendor_file:file getattr;

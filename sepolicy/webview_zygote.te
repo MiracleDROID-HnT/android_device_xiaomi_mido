@@ -1,0 +1,2 @@
+dontaudit webview_zygote gx_fpd_exec:file getattr;
+dontaudit webview_zygote vendor_file:file getattr;
