@@ -394,12 +394,10 @@ etc/permissions/com.qti.snapdragon.sdk.display.xml|79a36c560f8cdbfeca03911fefc28
 framework/com.qti.snapdragon.sdk.display.jar|cc367fe3c3525bc580f0d3ab41e43190dcee60dc
 lib/libsd_sdk_display.so:vendor/lib/libsd_sdk_display.so|35f948fad2633f8cf2c004655e1c24fa4a2b4eaf
 -lib/vendor.display.color@1.0.so|7d88075b6afd155e290e495a8608a0901ee624f7
-lib/vendor.display.color@1.1.so|41ea866f2e11a4b097c7090a463d4a3663e7f130
 lib/vendor.display.postproc@1.0.so|0c16ce7f6a42c484828cc679259e189ddd58e43a
 lib/vendor.qti.hardware.qdutils_disp@1.0.so|82c8076c100d2fcc01bcee9c08d01293ffc5447a
 lib64/libsd_sdk_display.so:vendor/lib64/libsd_sdk_display.so|8b79762452896eaa9ff97b7ae72646bfcf06423d
 -lib64/vendor.display.color@1.0.so|9bded3369cee5804c724199211345a34a0504a55
-lib64/vendor.display.color@1.1.so|42986bb6d9955d056ce8c71478996d7a0e205e5b
 lib64/vendor.display.postproc@1.0.so|28704c765bd9c4927a487c0a4d4281f1dbdb970d
 lib64/vendor.qti.hardware.qdutils_disp@1.0.so|7eb9a04c54c43e566728f4e11e078730c2e6c4f2
 vendor/bin/hw/vendor.display.color@1.0-service|fec0d808fa0b795bf3afe8cad8afa06dcc3bf6e1
@@ -409,12 +407,10 @@ vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437
 vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc|69d9cbc54f8ac0a0fb010f92bfa7de5981d643cf
 vendor/lib/libdisp-aba.so|975a0829a8817b424a68ab341ad4477f230595b9
 vendor/lib/vendor.display.color@1.0_vendor.so|2237affb01211bec583a383e0e189cedf6f9439e
-vendor/lib/vendor.display.color@1.1_vendor.so|175ec1ab96a29e2536c28b346776cc69e867cd1c
 vendor/lib/vendor.display.postproc@1.0_vendor.so|e9140f87261726a33a7cf7e53d622d4d81eb326d
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|cb9ff569cb044b87db22bf4d11e237d52c88cdd9
 vendor/lib64/libdisp-aba.so|aae81bec32e1c947201538e1b5b78f7bda060a2e
 vendor/lib64/vendor.display.color@1.0_vendor.so|bdf0e9f73501b51745329da30550ea559f726f08
-vendor/lib64/vendor.display.color@1.1_vendor.so|387e5862a02af1372a52750adb5435bf273ac0d3
 vendor/lib64/vendor.display.postproc@1.0_vendor.so|28704c765bd9c4927a487c0a4d4281f1dbdb970d
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0_vendor.so|7eb9a04c54c43e566728f4e11e078730c2e6c4f2
 
