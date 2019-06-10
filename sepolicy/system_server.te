@@ -2,3 +2,5 @@ allow system_server proc_touchpanel:dir search;
 allow system_server default_prop:property_service set;
 allow system_server proc_touchpanel:file rw_file_perms;
 dontaudit system_server dalvikcache_data_file:file { execute write };
+dontaudit system_server gx_fpd_exec:file getattr;
+dontaudit system_server vendor_file:file getattr;
