@@ -14,5 +14,5 @@ binder_call(folio_daemon, system_server)
 allow folio_daemon sensorservice_service:service_manager find;
 allow folio_daemon permission_service:service_manager find;
 
-#dontaudit folio_daemon gx_fpd_exec:file getattr;
+dontaudit folio_daemon file_type:file getattr;
 dontaudit folio_daemon vendor_file:file getattr;
