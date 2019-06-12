@@ -1,1 +1,3 @@
+dontaudit thermalserviced gx_fpd_exec:file getattr;
 dontaudit thermalserviced self:capability sys_admin;
+dontaudit thermalserviced vendor_file:file getattr;

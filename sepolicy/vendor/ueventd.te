@@ -1,1 +1,2 @@
+allow ueventd fpc_sysfs:file rw_file_perms;
 dontaudit ueventd self:capability sys_admin;

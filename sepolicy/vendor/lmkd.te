@@ -1,1 +1,3 @@
+dontaudit lmkd gx_fpd_exec:file getattr;
 dontaudit lmkd self:capability sys_admin;
+dontaudit lmkd vendor_file:file getattr;

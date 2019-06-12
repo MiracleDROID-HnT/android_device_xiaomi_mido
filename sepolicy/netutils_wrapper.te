@@ -1,3 +1,0 @@
-allow netutils_wrapper netmgrd:netlink_socket { read write };
-dontaudit netutils_wrapper gx_fpd_exec:file getattr;
-dontaudit netutils_wrapper vendor_file:file getattr;

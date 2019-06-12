@@ -1,2 +1,0 @@
-dontaudit vdc gx_fpd_exec:file getattr;
-dontaudit vdc vendor_file:file getattr;
