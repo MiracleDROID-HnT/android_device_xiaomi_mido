@@ -171,10 +171,10 @@ on boot
     chmod 0660 /sys/class/tp_glove/device/glove_enable
 
     # Flashlight
-    chown root system /sys/devices/soc/qpnp-flash-led-24/leds/led:torch_0/max_brightness
-    chmod 0660 /sys/devices/soc/qpnp-flash-led-24/leds/led:torch_0/max_brightness
-    chown root system /sys/devices/soc/qpnp-flash-led-24/leds/led:torch_1/max_brightness
-    chmod 0660 /sys/devices/soc/qpnp-flash-led-24/leds/led:torch_1/max_brightness
+    chown root system /sys/class/leds/led:torch_0/max_brightness
+    chmod 0660 /sys/class/leds/led:torch_0/max_brightness
+    chown root system /sys/class/leds/led:torch_1/max_brightness
+    chmod 0660 /sys/class/leds/led:torch_1/max_brightness
 
     # Allow access to emmc rawdump block partition and dload sysfs node
     chown root system /dev/block/bootdevice/by-name/rawdump -p /dev/block/
