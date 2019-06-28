@@ -37,7 +37,7 @@ fi
 . "$HELPER"
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$MDROID_ROOT" true
+setup_vendor "$DEVICE" "$VENDOR" "$MDROID_ROOT"
 
 # Copyright headers and guards
 write_headers "mido"
