@@ -58,12 +58,13 @@ fi
 # Initialize the helper
 setup_vendor "$DEVICE" "$VENDOR" "$MDROID_ROOT" true "$CLEAN_VENDOR"
 
-extract "$MY_DIR"/proprietary-files-qc.txt "$SRC" "$SECTION"
-
 extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 
 # Hax for cam configs
 CAMERA2_SENSOR_MODULES="$MDROID_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib/libmmcamera2_sensor_modules.so
 sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "$CAMERA2_SENSOR_MODULES"
+
+QTI_LIBPERMISSIONS="$MDROID_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/etc/permissions/qti_libpermissions.xml
+sed -i "s|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g" "$QTI_LIBPERMISSIONS"
 
 "$MY_DIR"/setup-makefiles.sh

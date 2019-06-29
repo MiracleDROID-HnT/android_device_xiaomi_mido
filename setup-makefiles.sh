@@ -42,9 +42,6 @@ setup_vendor "$DEVICE" "$VENDOR" "$MDROID_ROOT"
 # Copyright headers and guards
 write_headers "mido"
 
-# The standard common blobs
-write_makefiles "$MY_DIR"/proprietary-files-qc.txt true
-
 # The standard device blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt true
 
