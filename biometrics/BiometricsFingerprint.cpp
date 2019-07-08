@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.0-service.xiaomi_mido"
-#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.0-service.xiaomi_mido"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.xiaomi_mido"
+#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.1-service.xiaomi_mido"
 
 #include <hardware/hw_auth_token.h>
 #include <hardware/hardware.h>
@@ -32,7 +32,7 @@ namespace V2_1 {
 namespace implementation {
 
 // Supported fingerprint HAL version
-static const uint16_t kVersion = HARDWARE_MODULE_API_VERSION(2, 0);
+static const uint16_t kVersion = HARDWARE_MODULE_API_VERSION(2, 1);
 
 using RequestStatus =
         android::hardware::biometrics::fingerprint::V2_1::RequestStatus;

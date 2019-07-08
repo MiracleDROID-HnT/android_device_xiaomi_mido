@@ -1,4 +1,4 @@
-service fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.0-service.xiaomi_mido
+service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service.xiaomi_mido
     # "class hal" causes a race condition on some devices due to files created
     # in /data. As a workaround, postpone startup until later in boot once
     # /data is mounted.
@@ -8,7 +8,7 @@ service fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.0-servi
     group system sdcard_rw input
     disabled
 
-service gx_fpd /vendor/bin/gx_fpd
+service vendor.gx_fpd /vendor/bin/gx_fpd
     class core
     user system
     group system drmrpc
@@ -29,16 +29,16 @@ on boot
     chmod 0660 /sys/devices/soc/soc:fpc1020/wakeup_enable
 
 on property:sys.fp.vendor=switchf
-    stop gx_fpd
+    stop vendor.gx_fpd
     setprop sys.fp.vendor searchf
     setprop fpc.fp.miui.token 0
     setprop ro.boot.fpsensor fpc
     setprop ro.hardware.fingerprint searchf
-    start fps_hal
+    start vendor.fps_hal
 
 on property:sys.fp.onstart=1
     setprop goodix.fp.miui.analyse 1
     setprop goodix.fp.miui.token 0
     setprop ro.boot.fpsensor gdx
     setprop ro.hardware.fingerprint goodix
-    start fps_hal
+    start vendor.fps_hal
