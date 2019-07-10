@@ -52,9 +52,6 @@
     <ctl name="RX HPH Mode" value="NORMAL" />
     <ctl name="COMP0 RX1" value="0" />
     <ctl name="COMP0 RX2" value="0" />
-    <ctl name="RX1 Digital Volume" value="84" />
-    <ctl name="RX2 Digital Volume" value="84" />
-    <ctl name="RX3 Digital Volume" value="84" />
     <ctl name="IIR1 INP1 Volume" value="84" />
     <ctl name="IIR1 INP2 Volume" value="84" />
     <ctl name="IIR1 INP3 Volume" value="84" />
@@ -62,8 +59,6 @@
     <ctl name="ADC1 Volume" value="4" />
     <ctl name="ADC2 Volume" value="4" />
     <ctl name="ADC3 Volume" value="4" />
-    <ctl name="DEC1 Volume" value="84" />
-    <ctl name="DEC2 Volume" value="84" />
     <ctl name="DEC2 MUX" value="ZERO" />
     <ctl name="DEC1 MUX" value="ZERO" />
     <ctl name="ADC2 MUX" value="ZERO" />
@@ -1157,8 +1152,6 @@
     <path name="handset-mic">
         <path name="adc1" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
-        <ctl name="DEC1 Volume" value="96" />
-        <ctl name="DEC2 Volume" value="96" />
     </path>
 
     <path name="headphones">
@@ -1181,8 +1174,6 @@
         <path name="adc2" />
         <ctl name="ADC2 MUX" value="INP2" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
-        <ctl name="DEC1 Volume" value="89" />
-        <ctl name="DEC2 Volume" value="89" />
     </path>
 
     <path name="sub-mic">
@@ -1318,8 +1309,6 @@
 
     <path name="voice-dmic-ef">
         <path name="dmic-endfire" />
-        <ctl name="DEC1 Volume" value="89" />
-        <ctl name="DEC2 Volume" value="89" />
     </path>
 
     <path name="voice-speaker-dmic-ef">
@@ -1341,8 +1330,6 @@
 
     <path name="handset-stereo-dmic-ef">
         <path name="speaker-dmic-endfire" />
-        <ctl name="DEC1 Volume" value="96" />
-        <ctl name="DEC2 Volume" value="96" />
     </path>
 
     <path name="speaker-stereo-dmic-ef">
