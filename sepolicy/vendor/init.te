@@ -1,1 +1,5 @@
 allow init { domain -crash_dump -lmkd }:process noatsecure;
+dontaudit init system_file:dir relabelfrom;
+dontaudit init system_file:file relabelfrom;
+dontaudit init vendor_file:dir relabelfrom;
+dontaudit init vendor_file:file relabelfrom;
