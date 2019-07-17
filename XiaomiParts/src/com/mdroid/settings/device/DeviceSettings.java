@@ -19,11 +19,14 @@ package com.mdroid.settings.device;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.DialogFragment;
+import android.app.FragmentManager;
 import android.content.res.Resources;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.support.v14.preference.PreferenceFragment;
 import android.support.v7.preference.ListPreference;
 import android.support.v7.preference.Preference;
@@ -50,17 +53,24 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String KEY_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
     public static final String KEY_WHITE_TORCH_BRIGHTNESS = "white_torch_brightness";
     public static final String KEY_GLOVE_MODE = "glove_mode";
+    public static final String KEY_ZRAM = "zram";
+    public static final String PROP_ZRAM = "persist.vendor.qti.config.zram";
 
     private VibratorStrengthPreference mVibratorStrength;
     private YellowTorchBrightnessPreference mYellowTorchBrightness;
     private WhiteTorchBrightnessPreference mWhiteTorchBrightness;
     private TwoStatePreference mGloveMode;
+    private TwoStatePreference mZram;
+
+    private static FragmentManager mFragmentManager;
 
     private static final String GLOVE_MODE_FILE = "/sys/devices/virtual/tp_glove/device/glove_enable";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.main, rootKey);
+
+        mFragmentManager = getFragmentManager();
 
         PreferenceScreen mKcalPref = (PreferenceScreen) findPreference("kcal");
         mKcalPref.setOnPreferenceClickListener(new OnPreferenceClickListener() {
@@ -100,11 +110,17 @@ public class DeviceSettings extends PreferenceFragment implements
         mGloveMode = (TwoStatePreference) findPreference(KEY_GLOVE_MODE);
         mGloveMode.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(DeviceSettings.KEY_GLOVE_MODE, false));
         mGloveMode.setOnPreferenceChangeListener(this);
+
+        mZram = (TwoStatePreference) findPreference(KEY_ZRAM);
+        mZram.setChecked(SystemProperties.getBoolean(PROP_ZRAM, false));
+        mZram.setOnPreferenceChangeListener(this);
     }
 
     public static void restore(Context context) {
         boolean gloveModeData = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(DeviceSettings.KEY_GLOVE_MODE, false);
         Utils.writeValue(GLOVE_MODE_FILE, gloveModeData ? "1" : "0");
+        boolean zramData = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(DeviceSettings.KEY_ZRAM, false);
+        SystemProperties.set(PROP_ZRAM, zramData ? "true" : "false");
     }
 
     @Override
@@ -119,7 +135,19 @@ public class DeviceSettings extends PreferenceFragment implements
             SharedPreferences.Editor prefChange = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
             prefChange.putBoolean(KEY_GLOVE_MODE, enabled).commit();
             Utils.writeValue(GLOVE_MODE_FILE, enabled ? "1" : "0");
+        } else if (preference == mZram) {
+            Boolean enabled = (Boolean) newValue;
+            SharedPreferences.Editor prefChange = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
+            prefChange.putBoolean(KEY_ZRAM, enabled).commit();
+            SystemProperties.set(PROP_ZRAM, (Boolean) newValue ? "true" : "false");
+            confirmRebootChange();
+            return true;
         }
         return true;
+    }
+
+    private static void confirmRebootChange() {
+        DialogFragment newFragment = new confirmRebootChangeDialog();
+        newFragment.show(mFragmentManager, "zram");
     }
 }

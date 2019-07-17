@@ -60,4 +60,12 @@
     <string name="headphone_gain">Підсилення навушників</string>
     <string name="speaker_gain">Підсилення динаміка</string>
     <string name="mic_gain">Підсилення мікрофону</string>
+
+    <string name="misc_title">Різне</string>
+    <string name="zram_title">ZRAM</string>
+    <string name="zram_summary">Увімкнути ZRAM</string>
+    <string name="dialog_reboot_required">Потрібне перезавантаження</string>
+    <string name="dialog_reboot_required_summary">Перезавантаження необхідне для того, щоб зміни набрали сили!</string>
+    <string name="reboot_now">Перезавантажити зараз</string>
+    <string name="reboot_later">Перезавантажити пізніше</string>
 </resources>

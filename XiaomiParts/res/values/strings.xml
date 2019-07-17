@@ -60,4 +60,12 @@
     <string name="headphone_gain">Headphone gain</string>
     <string name="speaker_gain">Speaker gain</string>
     <string name="mic_gain">Microphone gain</string>
+
+    <string name="misc_title">Misc</string>
+    <string name="zram_title">ZRAM</string>
+    <string name="zram_summary">Enable ZRAM</string>
+    <string name="dialog_reboot_required">Reboot required</string>
+    <string name="dialog_reboot_required_summary">A reboot is required for the changes to take effect!</string>
+    <string name="reboot_now">Reboot now</string>
+    <string name="reboot_later">Reboot later</string>
 </resources>

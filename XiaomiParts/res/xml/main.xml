@@ -60,4 +60,15 @@
             android:persistent="false" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/misc_title">
+        <SwitchPreference
+            android:key="zram"
+            android:title="@string/zram_title"
+            android:summary="@string/zram_summary"
+            android:icon="@null"
+            android:paddingLeft="0dp"
+            android:persistent="false" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
