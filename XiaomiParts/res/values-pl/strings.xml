@@ -61,4 +61,11 @@
     <string name="speaker_gain">Wzmocnienie głośnika</string>
     <string name="mic_gain">Wzmocnienie mikrofonu</string>
 
+    <string name="misc_title">Różne</string>
+    <string name="zram_title">Kompresja pamięci RAM (ZRAM)</string>
+    <string name="zram_summary">Włącz ZRAM</string>
+    <string name="dialog_reboot_required">Ponowne uruchomienie telefonu wymagane</string>
+    <string name="dialog_reboot_required_summary">Ponowne uruchomienie jest wymagane, aby zmiany zaczęły obowiązywać!</string>
+    <string name="reboot_now">Zrestartuj teraz</string>
+    <string name="reboot_later">Zrestartuj późniejr</string>
 </resources>
