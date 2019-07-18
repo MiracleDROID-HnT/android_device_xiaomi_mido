@@ -1,1 +1,1 @@
-dontaudit hvdcp self:capability sys_admin;
+allow hvdcp self:capability sys_admin;

@@ -1,1 +1,1 @@
-dontaudit location self:capability sys_admin;
+allow location self:capability sys_admin;

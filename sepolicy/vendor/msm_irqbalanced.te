@@ -1,1 +1,1 @@
-dontaudit msm_irqbalanced self:capability sys_admin;
+allow msm_irqbalanced self:capability sys_admin;

@@ -1,2 +1,2 @@
 allow netmgrd netutils_wrapper:process noatsecure;
-dontaudit netmgrd self:capability sys_admin;
+allow netmgrd self:capability sys_admin;

@@ -1,1 +1,1 @@
-dontaudit sensors self:capability sys_admin;
+allow sensors self:capability sys_admin;
