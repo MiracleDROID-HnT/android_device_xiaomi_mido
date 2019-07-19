@@ -233,7 +233,3 @@ ro.max.fling_velocity=20000
 # Device hostname
 PRODUCT_PROPERTY_OVERRIDES += \
 net.hostname=RedmiNote4
-
-# ZRAM
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.vendor.qti.config.zram=true
