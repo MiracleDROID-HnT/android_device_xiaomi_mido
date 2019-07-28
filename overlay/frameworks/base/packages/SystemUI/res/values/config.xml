@@ -30,5 +30,8 @@
 
     <!-- Doze: can we assume the pickup sensor includes a proximity check? -->
     <bool name="doze_pickup_performs_proximity_check">true</bool>
+
+    <!-- Time to consider recent task is too old to be shown. -->
+    <integer name="config_isHistoricalTaskHours">12</integer>
 </resources>
 
