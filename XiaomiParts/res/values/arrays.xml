@@ -12,6 +12,7 @@
         <item>@string/extreme_amoled</item>
         <item>@string/warm_amoled</item>
         <item>@string/hybrid_mamba</item>
+        <item>@string/retention</item>
     </string-array>
 
     <string-array name="presets_values">
@@ -26,5 +27,6 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
+        <item>11</item>
     </string-array>
 </resources>

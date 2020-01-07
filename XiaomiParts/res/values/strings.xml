@@ -53,6 +53,7 @@
     <string name="extreme_amoled">Extreme Amoled</string>
     <string name="warm_amoled">Warm Amoled</string>
     <string name="hybrid_mamba">Hybrid Mamba</string>
+    <string name="retention">Retention fix</string>
 
     <string name="sound_title">Sound</string>
     <string name="sound_control_title">Sound control</string>

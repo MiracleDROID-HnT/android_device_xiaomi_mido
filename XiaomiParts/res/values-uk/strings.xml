@@ -53,6 +53,7 @@
     <string name="extreme_amoled">Екстримальний Amoled</string>
     <string name="warm_amoled">Теплий Amoled</string>
     <string name="hybrid_mamba">Гібридний Мамба</string>
+    <string name="retention">Виправлення залишкового зображення</string>
 
     <string name="sound_title">Звук</string>
     <string name="sound_control_title">Управління звуком</string>
